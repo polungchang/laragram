@@ -1,0 +1,23 @@
+{
+    "Login": "登入",
+    "Logout": "登出",
+    "Register": "註冊",
+    "Email Address": "電子郵件",
+    "Password": "密碼",
+    "Confirm Password": "確認密碼",
+    "Remember Me": "記住我",
+    "Forgot Your Password?": "忘記密碼?",
+    "Name": "姓名",
+    "Username": "用戶名稱",
+    "Website": "網站",
+    "Bio": "個人簡介",
+    "Avatar": "大頭貼照",
+    "posts": "貼文",
+    "followers": "追蹤者",
+    "following": "追蹤中",
+    "Edit Profile": "編輯個人檔案",
+    "Create Post": "建立貼文",
+    "Create": "建立",
+    "Image": "圖片",
+    "Write a caption...": "寫一個標題..."
+}
