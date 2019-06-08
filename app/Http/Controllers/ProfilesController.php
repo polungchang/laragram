@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use Illuminate\Validation\Rule;
 
 class ProfilesController extends Controller
 {
@@ -35,9 +36,16 @@ class ProfilesController extends Controller
             'image' => '',
         ]);
 
+        // dd($user->id);
+
         $userData = request()->validate([
             'name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'username' => [
+                'required', 
+                'string', 
+                'max:255', 
+                Rule::unique('users')->ignore($user->id),
+            ],
         ]);
 
         if (request('image')) {

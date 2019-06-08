@@ -11,8 +11,10 @@
         <div class="col-9 p-5">
             <div class="d-flex justify-content-between align-items-baseline">
                 <div class="d-flex align-items-center">
-                    <h4>{{ $user->username }}</h4>
-                    <follow-component user-id="{{ $user->id }}" is-following="{{ $isFollowing }}"></follow-component>
+                    <h4>{{ $user->name }}</h4>
+                    @cannot('update', $user->profile)
+                        <follow-component user-id="{{ $user->id }}" is-following="{{ $isFollowing }}"></follow-component>
+                    @endcannot
                 </div>
                 @can('update', $user->profile)
                     <a href="/p/create">{{ __('Create Post') }}</a>
