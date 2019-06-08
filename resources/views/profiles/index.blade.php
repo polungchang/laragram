@@ -11,7 +11,7 @@
         <div class="col-9 p-5">
             <div class="d-flex justify-content-between align-items-baseline">
                 <div class="d-flex align-items-center">
-                    <h4>{{ $user->name }}</h4>
+                    <h4>{{ $user->username }}</h4>
                     @cannot('update', $user->profile)
                         <follow-component user-id="{{ $user->id }}" is-following="{{ $isFollowing }}"></follow-component>
                     @endcannot
@@ -30,7 +30,7 @@
                 <div class="pr-5"><strong>{{ $user->followers->count() }}</strong> {{ __('followers') }}</div>
                 <div class="pr-5"><strong>{{ $user->followings->count() }}</strong> {{ __('following') }}</div>
             </div>
-            <div class="pt-4 font-weight-bold">{{ $user->username }}</div>
+            <div class="pt-4 font-weight-bold">{{ $user->name }}</div>
             <div>{{ $user->profile->bio }}</div>
             <div><a href="{{ $user->profile->getWebsiteHref() }}">{{ $user->profile->website }}</a></div>
         </div>
